@@ -6,7 +6,7 @@ pub trait Store<K: Eq + Hash> {
 
     fn put<V: Data>(key: K, value: V) -> bool;
 
-    fn get<V: Data>(key: K) -> V;
+    fn get<V: Data>(key: K) -> Option<V>;
 
     fn update<V: Data>(key: K, value: V) -> bool;
 
