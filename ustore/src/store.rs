@@ -11,7 +11,9 @@ pub trait Store<K: Eq + Hash> {
     fn update<V: Data>(key: K, value: V) -> bool;
 
     fn has(key: K) -> bool;
+    
+    fn delete(key: K) -> bool;
 
-    fn size() -> usize;
+    fn size() -> u64;
 
 }
